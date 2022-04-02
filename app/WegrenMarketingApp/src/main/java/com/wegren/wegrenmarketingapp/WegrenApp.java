@@ -21,7 +21,7 @@ public class WegrenApp extends Application {
         String url = Config.BASE_URL+"system-information-create/";
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                 response -> Toast.makeText(context, "Success", Toast.LENGTH_SHORT).show(),
-                error -> Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show()) {
+                error -> Toast.makeText(context, error.toString(), Toast.LENGTH_SHORT).show()) {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
